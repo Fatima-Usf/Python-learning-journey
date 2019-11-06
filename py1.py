@@ -1,11 +1,5 @@
-""""for i in [1, 2, 3, 4, 5]: print(i)
-for j in [1, 2, 3, 4, 5]: print(j)
-print(i + j)
 
-print (i)
-print ("done looping")"""
-
-empty_dict = {} # Pythonic
+"""empty_dict = {} # Pythonic
 
 grades = { "Joel" : 80, "Tim" : 95 }
 joels_grade = grades["Joel"]
@@ -41,6 +35,7 @@ print(num_students)
 # equals 80
 # True # False
 # equals 80 # equals 0
+"""
 
 tweet = {
 "user" : "joelgrus",
@@ -51,3 +46,27 @@ tweet = {
 tweet_keys = tweet.keys() # list of keys tweet_values = tweet.values() # list of values
 tweet_values = tweet.values() # list of values
 print(tweet_keys, tweet_values)
+
+print("-------------------------------")
+tweet_items = tweet.items() # list of (key, value) tuples
+print(tweet_items)
+
+print("user" in tweet_keys)
+"user" in tweet
+"joelgrus" in tweet_values
+# True, but uses a slow list in
+# more Pythonic, uses faster dict in
+# True
+
+from collections import defaultdict
+dd_list = defaultdict(list)
+dd_list[2].append(1)
+print(dd_list)
+dd_dict = defaultdict(dict)
+dd_dict["Joel"]["City"] = "Seattle"
+dd_pair = defaultdict(lambda: [0, 0])
+dd_pair[2][1] = 1
+# list() produces an empty list # now dd_list contains {2: [1]}
+# dict() produces an empty dict
+# { "Joel" : { "City" : Seattle"}}
+# now dd_pair contains {2: [0,1]}"""
