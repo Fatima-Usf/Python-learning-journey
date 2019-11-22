@@ -71,11 +71,12 @@ dd_pair[2][1] = 1
 # { "Joel" : { "City" : Seattle"}}
 # now dd_pair contains {2: [0,1]}"""
 
+import glob
 # lecture d'un ficihier 
- filenames = glob.glob('*.txt')
+filenames = glob.glob('*.txt')
  # On crée un dict complétement vide
- d = {}
- for file in filenames:
+d = {}
+for file in filenames:
      #a chaque fois qu'on ouvre un fichier
      with open(file, 'r') as f:
          # on rajoute une clé a notre dictionnaire, elle va prendre le nom de notre fichier
