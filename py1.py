@@ -70,3 +70,12 @@ dd_pair[2][1] = 1
 # dict() produces an empty dict
 # { "Joel" : { "City" : Seattle"}}
 # now dd_pair contains {2: [0,1]}"""
+
+# lecture d'un ficihier 
+ filenames = glob.glob('*.txt')
+ # On crée un dict complétement vide
+ d = {}
+ for file in filenames:
+     with open(file, 'r') as f:
+         # on rajoute une clé a notre dictionnaire, elle va prendre le nom de notre fichier
+         d[]
