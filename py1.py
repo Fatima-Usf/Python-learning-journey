@@ -76,6 +76,9 @@ dd_pair[2][1] = 1
  # On crée un dict complétement vide
  d = {}
  for file in filenames:
+     #a chaque fois qu'on ouvre un fichier
      with open(file, 'r') as f:
          # on rajoute une clé a notre dictionnaire, elle va prendre le nom de notre fichier
-         d[]
+         d[file] = f.read().splitlines()
+
+print(d)
